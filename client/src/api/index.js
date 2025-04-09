@@ -1,5 +1,11 @@
 import axios from "axios";
-const url = "http://localhost:5000/posts";
+console.log(process.env.BASE_URL);
+
+const baseURL = process.env.BASE_URL || "http://localhost:5000";
+
+const url = `${baseURL}/posts`;
+
+console.log("url:", url);
 
 export const fetchPosts = () => axios.get(url);
 export const createPost = (newPost) => axios.post(url, newPost);
