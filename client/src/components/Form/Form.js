@@ -109,7 +109,7 @@ const Form = ({ currentId, setCurrentId }) => {
         <Button
           className={classes.buttonSubmit}
           variant="contained"
-          color="primary"
+          color="success"
           size="large"
           type="submit"
           fullWidth
