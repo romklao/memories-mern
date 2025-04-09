@@ -17,15 +17,8 @@ app.use(cors());
 
 app.use("/posts", postRoutes);
 
-// app.get("/", (req, res) => {
-//   console.log("GET / request received");
-//   res.send("Memories is running...");
-// });
-
 if (process.env.NODE_ENV === "production") {
   // Resolve __dirname in ES modules
-  console.log("Connecting to MongoDB with URL:", process.env.CONNECTION_URL);
-
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
 

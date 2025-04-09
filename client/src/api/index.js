@@ -1,8 +1,7 @@
 import axios from "axios";
-console.log(process.env.BASE_URL);
 
-const baseURL = process.env.BASE_URL || "http://localhost:5000";
-
+const baseURL = process.env.REACT_APP_BASE_URL;
+console.log("baseURL:", baseURL);
 const url = `${baseURL}/posts`;
 
 console.log("url:", url);
